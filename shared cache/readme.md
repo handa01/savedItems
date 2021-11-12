@@ -7,7 +7,13 @@ the same view of cached data.
 
 
 There are multiple ways to get a distributed cache; to name a few  
-Infinispan, Terracotta/Ehcache, Hazelcast, Memcached, Redis, Cassandra, Elasticache(by Amazon).  
+* Infinispan, 
+* Terracotta/Ehcache,
+* Hazelcast, Memcached, 
+* Redis,
+* Cassandra, 
+* Elasticache(by Amazon).  
+
 The former three are Java-specific, but the rest can be used in any setup.
 
 ## Hazelcast
