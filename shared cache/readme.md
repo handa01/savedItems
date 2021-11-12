@@ -9,7 +9,8 @@ the same view of cached data.
 There are multiple ways to get a distributed cache; to name a few  
 * Infinispan, 
 * Terracotta/Ehcache,
-* Hazelcast, Memcached, 
+* Hazelcast, 
+* Memcached, 
 * Redis,
 * Cassandra, 
 * Elasticache(by Amazon).  
