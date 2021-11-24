@@ -1,0 +1,9 @@
+---
+applications:
+- name: cf-spring-session-redis
+  memory: 1024M
+  path: C:\zMyprojects\SpringSessionRedis\target\SpringSessionRedis.war
+  buildpacks:
+   - sap_java_buildpack
+  env:
+    REDIS_HOST_URL: redis://iRVy5Tbpg9z8txMpJ55WlutEsSWRSX4f@redis-18601.c250.eu-central-1-1.ec2.cloud.redislabs.com:18601
