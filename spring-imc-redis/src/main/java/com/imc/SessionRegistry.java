@@ -2,14 +2,11 @@ package com.imc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.session.FindByIndexNameSessionRepository;
 import org.springframework.session.Session;
-import org.springframework.session.data.redis.RedisOperationsSessionRepository;
 import org.springframework.session.security.SpringSessionBackedSessionRegistry;
 
 //@Configuration
@@ -43,7 +40,44 @@ public class SessionRegistry extends WebSecurityConfigurerAdapter {
 //        RedisOperationsSessionRepository sessionRepository = new RedisOperationsSessionRepository(jedisConnectionFactory);
 //        return new SpringSessionBackedSessionRegistry<>(sessionRepository);
 //        return new SessionRegistryImpl();
-        return new SpringSessionBackedSessionRegistry<>(this.sessionRepository);
+        return new IssSessionRegistry(sessionRepository);
     }
+
+//    @SuppressWarnings("unchecked")
+//    @Bean
+//    public SpringSessionBackedSessionRegistry sessionRegistry() {
+////        RedisConnectionFactory redisConnectionFactory = redisConnectionFactory();
+////        RedisTemplate<Object, Object> redisTemplate = stringTemplate(redisConnectionFactory);
+//        return new SpringSessionBackedSessionRegistry(this.sessionRepository) {
+//            @Override
+//            public void registerNewSession(final String sessionId, final Object principal) {
+//                super.registerNewSession(sessionId, principal);
+//
+////                final StopWatchISS stopWatchISS = new StopWatchISS();
+////                stopWatchISS.start();
+//
+//                try {
+////                    final IMCUserDetails userDetails = (IMCUserDetails) principal;
+////                    LOGGER.debug("Registering new Session: {}", sessionId);
+////
+////                    final UsageDTO usage = new UsageDTO();
+////                    usage.setSessionID(sessionId);
+////                    usage.setUserBO(userDetails.getUserBO());
+////                    usage.setUserName(userDetails.getUsername().toLowerCase());
+////                    usage.setClient(getBrowserDetails());
+////
+////                    usageService.startSessionUsage(usage);
+//
+////                    sessionIdsTemplate.opsForValue().set(sessionId, new SessionInformation(principal, sessionId, new Date()));
+////
+////                    principalsTemplate.opsForSet().add(buildPrincipalKey(principal), sessionId);
+//                } catch (final Exception e) {
+//                    System.out.println("Unable to add usage. " + sessionId);
+//                }
+//
+//                System.out.println("Time taken to save session id: {} ms" + sessionId);
+//            }
+//        };
+//    }
 
 }
