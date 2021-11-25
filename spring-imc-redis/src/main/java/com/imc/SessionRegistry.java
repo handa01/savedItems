@@ -15,8 +15,8 @@ import org.springframework.session.security.SpringSessionBackedSessionRegistry;
 //@Configuration
 public class SessionRegistry extends WebSecurityConfigurerAdapter {
 
-//    @Autowired
-//    private FindByIndexNameSessionRepository<? extends Session> sessionRepository;
+    @Autowired
+    private FindByIndexNameSessionRepository<? extends Session> sessionRepository;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -36,9 +36,9 @@ public class SessionRegistry extends WebSecurityConfigurerAdapter {
 
     @Bean
     public org.springframework.security.core.session.SessionRegistry sessionRegistry() {
-        return new SessionRegistryImpl();
-//        System.out.println(">>>>>>>>>>>>>>>>> I'm a log");
-//        return new IssSessionRegistry(sessionRepository);
+//        return new SessionRegistryImpl();
+        System.out.println(">>>>>>>>>>>>>>>>> I'm a log");
+        return new IssSessionRegistry(sessionRepository);
     }
 
     @Autowired
