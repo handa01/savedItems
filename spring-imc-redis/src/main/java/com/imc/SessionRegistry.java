@@ -2,9 +2,12 @@ package com.imc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.session.SessionRegistryImpl;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.session.FindByIndexNameSessionRepository;
 import org.springframework.session.Session;
 import org.springframework.session.security.SpringSessionBackedSessionRegistry;
@@ -12,12 +15,12 @@ import org.springframework.session.security.SpringSessionBackedSessionRegistry;
 //@Configuration
 public class SessionRegistry extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private FindByIndexNameSessionRepository<? extends Session> sessionRepository;
+//    @Autowired
+//    private FindByIndexNameSessionRepository<? extends Session> sessionRepository;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
+        http.csrf().disable()
                 .authorizeRequests()
                 .anyRequest().authenticated()
                 .and()
@@ -33,51 +36,26 @@ public class SessionRegistry extends WebSecurityConfigurerAdapter {
 
     @Bean
     public org.springframework.security.core.session.SessionRegistry sessionRegistry() {
-//        JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
-//        jedisConnectionFactory.setHostName("localhost");
-//        jedisConnectionFactory.setPort(6379);
-//        jedisConnectionFactory.setUsePool(true);
-//        RedisOperationsSessionRepository sessionRepository = new RedisOperationsSessionRepository(jedisConnectionFactory);
-//        return new SpringSessionBackedSessionRegistry<>(sessionRepository);
-//        return new SessionRegistryImpl();
-        return new IssSessionRegistry(sessionRepository);
+        return new SessionRegistryImpl();
+//        System.out.println(">>>>>>>>>>>>>>>>> I'm a log");
+//        return new IssSessionRegistry(sessionRepository);
     }
 
-//    @SuppressWarnings("unchecked")
-//    @Bean
-//    public SpringSessionBackedSessionRegistry sessionRegistry() {
-////        RedisConnectionFactory redisConnectionFactory = redisConnectionFactory();
-////        RedisTemplate<Object, Object> redisTemplate = stringTemplate(redisConnectionFactory);
-//        return new SpringSessionBackedSessionRegistry(this.sessionRepository) {
-//            @Override
-//            public void registerNewSession(final String sessionId, final Object principal) {
-//                super.registerNewSession(sessionId, principal);
-//
-////                final StopWatchISS stopWatchISS = new StopWatchISS();
-////                stopWatchISS.start();
-//
-//                try {
-////                    final IMCUserDetails userDetails = (IMCUserDetails) principal;
-////                    LOGGER.debug("Registering new Session: {}", sessionId);
-////
-////                    final UsageDTO usage = new UsageDTO();
-////                    usage.setSessionID(sessionId);
-////                    usage.setUserBO(userDetails.getUserBO());
-////                    usage.setUserName(userDetails.getUsername().toLowerCase());
-////                    usage.setClient(getBrowserDetails());
-////
-////                    usageService.startSessionUsage(usage);
-//
-////                    sessionIdsTemplate.opsForValue().set(sessionId, new SessionInformation(principal, sessionId, new Date()));
-////
-////                    principalsTemplate.opsForSet().add(buildPrincipalKey(principal), sessionId);
-//                } catch (final Exception e) {
-//                    System.out.println("Unable to add usage. " + sessionId);
-//                }
-//
-//                System.out.println("Time taken to save session id: {} ms" + sessionId);
-//            }
-//        };
-//    }
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication()
+                .passwordEncoder(passwordEncoder)
+                .withUser("user").password(passwordEncoder.encode("123456")).roles("USER")
+                .and()
+                .withUser("admin").password(passwordEncoder.encode("imc")).roles("USER", "ADMIN");
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
 }
