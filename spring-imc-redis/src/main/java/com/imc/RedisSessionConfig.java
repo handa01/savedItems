@@ -32,14 +32,14 @@ public class RedisSessionConfig extends AbstractHttpSessionApplicationInitialize
 
         // Enterprise cloud
 //        redisConfig.setPort(18601);
-//        redisConfig.setHostName("redis-18601.c250.eu-central-1-1.ec2.cloud.redislabs.com");
-//        redisConfig.setPassword("iRVy5Tbpg9z8txMpJ55WlutEsSWRSX4f");
+//        redisConfig.setHostName("<<redis-hostname>>");
+//        redisConfig.setPassword("<<redis-password>>");
 
 
         // cf service
         redisConfig.setPort(1249);
-        redisConfig.setHostName("master.rg-b53cf680-1fc8-41e2-8fa9-f3d045e784be.9u04ff.use1.cache.amazonaws.com");
-        redisConfig.setPassword("XhLjKapfymjoxhYBpQIimzPxDgjJLfyo");
+        redisConfig.setHostName("<<redis-cache-hostname>>");
+        redisConfig.setPassword("<<redis-cache-password>>");
 
         JedisClientConfiguration jedisClientConfiguration = JedisClientConfiguration.builder()
                 .connectTimeout(Duration.ofSeconds(10))
