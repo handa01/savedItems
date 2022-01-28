@@ -18,7 +18,8 @@
     final List<Triple> deletions = GraphUtil.findAll(processDelta.getDeletions()).toList();
   ```
 * And we can use these List to form our result
-* [Code changes](https://github.com/in-mind-cloud/development/blob/7a785d9a34c4a893ca25c344a1bca8f46137c341/product/iss/core/src/main/java/com/imc/iss/web/services/util/CreateBOFromTriples.java#L338)
+* [method to create delta response](https://github.com/in-mind-cloud/development/blob/7a785d9a34c4a893ca25c344a1bca8f46137c341/product/iss/core/src/main/java/com/imc/iss/web/services/util/CreateBOFromTriples.java#L338)
+* [code changes](https://github.com/in-mind-cloud/development/compare/2202-development...2202-product-api-changes)
 
 
 ## Problems
