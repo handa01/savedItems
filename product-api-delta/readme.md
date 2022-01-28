@@ -1,7 +1,7 @@
 # Product Api changes
 
-* Make changes to the api `@PatchMapping(value = "/{productId}")` to return only the delta changes containing:
-   * Changes from the payload
+* Make changes to the api `@PatchMapping(value = "/{productId}")` to return only the delta. Containing:
+   * Changes coming from the payload
    * Any other changes coming from imcscript, triggers or groovy scripts
    
 * Add a RequestParam isSimulation to take a boolean value
@@ -22,15 +22,16 @@
 
 
 ## Problems
-1. How to handle the deletions
-  * Currently, in Patch operation we are not performing any deletions
-2. How to handle updating data using multiple endpoints
+1. **How to handle the deletions**
+   * Currently, in Patch operation we are not performing any deletions
+2. **How to handle updating data using multiple endpoints**
    * for example, you update something in the account using `accounts/{id}` api, then update something in the address (using address end point - `accounts/{id}/addresses`), 
    * should we require the previous account changes too to maintain the state?
-3. How to handle the cyclic dependents 
+3. **How to handle the cyclic dependents**
     * like includesSalesItem and salesItemIncludedBy or containsQuote vs quoteContainedBy
     * We are forming response from a set of Triples, so, we will not face this problem as we are not retrieving any data.
-4. In Patch operation, if we don't provide id for a child resource(like Address inside Account) it will create it and a random id is generated for it.
+4. **Creating dependent resources using Patch operation**
+    * As of now, if we don't provide id for a child resource(like Address inside Account) it will create it and a random id is generated for it.
     * But when `isSimulation=true` we are not doing a commit to DB, thus that Address doesn't exist in the system.
     * So, if we then pass that delta payload with `isSimulation=false`, it will reject it saying that Address doesn't exist.
     * **Possible Solution**: remove the id of the created resource from payload.
