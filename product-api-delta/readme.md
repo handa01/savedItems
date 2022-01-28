@@ -37,3 +37,10 @@
     * **Possible Solution**: remove the id of the created resource from payload.
     * How to identify if the child resource is created or updated?
        * Currently, identifying it if the Addition Triples contains: `Schema.objectId` or `Schema.objectDateOfCreation`
+
+
+## Example Screenshots
+
+![example-1](images/example-1.PNG)
+
+![example-2](images/example-2.PNG)
