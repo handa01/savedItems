@@ -18,6 +18,20 @@
     final List<Triple> deletions = GraphUtil.findAll(processDelta.getDeletions()).toList();
   ```
 * And we can use these List to form our result
+* For example: 
+   * If we just update the `objectName` in `Account` Resource from 'Test Account 01' to 'Test Account 02'
+   * The `List<Triple> additions` will be
+     ```
+      [
+        http://localhost:8080/iss/Account#cbaecd50012e4d27b60432ee3bf72c48 @http://www.inmindcloud.com/application/schema.owl#objectName "Test Account 02"
+      ]
+     ```
+   * And the `List<Triple> deletions` will be
+     ```
+      [
+        http://localhost:8080/iss/Account#cbaecd50012e4d27b60432ee3bf72c48 @http://www.inmindcloud.com/application/schema.owl#objectName "Test Account 01"
+      ]
+     ```
 * [method to create delta response](https://github.com/in-mind-cloud/development/blob/7a785d9a34c4a893ca25c344a1bca8f46137c341/product/iss/core/src/main/java/com/imc/iss/web/services/util/CreateBOFromTriples.java#L338)
 * [code changes](https://github.com/in-mind-cloud/development/compare/2202-development...2202-product-api-changes)
 
