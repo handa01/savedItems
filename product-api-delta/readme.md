@@ -81,6 +81,21 @@
     * **Solution 2**: directly commit it to DB, in case of create
 
 
+## Use Cases 
+1. Use Case 1:
+   * Update in primary (details screen, header). Eg - update ERP-id in Account detail screen
+   * Update in dependents. Eg - update address in Account
+   * Then, save/cancel
+2. Use Case 2:
+   * Update in primary
+   * create/delete in dependents. Eg - create/delete Address
+   * Then, save/cancel
+3. Use Case 3:
+   * Update in primary
+   * update in dependents
+   * create/delete in dependents
+   * Then, save/cancel
+
 ## Example Screenshots
 
 ![example-1](images/example-1.PNG)
