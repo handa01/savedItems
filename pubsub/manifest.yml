@@ -1,0 +1,11 @@
+---
+applications:
+- name: cf-spring-imc-messaging
+  memory: 1024M
+  path: target/pubsub-0.0.1-SNAPSHOT.jar
+  buildpacks:
+   - sap_java_buildpack
+  env:
+    REDIS_HOST_URL: redis://iRVy5Tbpg9z8txMpJ55WlutEsSWRSX4f@redis-18601.c250.eu-central-1-1.ec2.cloud.redislabs.com:18601
+  services:
+   - kibana-logs
