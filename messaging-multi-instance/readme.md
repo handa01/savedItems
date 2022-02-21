@@ -13,9 +13,10 @@ the message evaporates and cannot be recovered.
    * `/addCurrency/{curr}`: first one only updates the current instance, without the messaging feature. So the end result will be that the value 
      for 1 instance is updated, the value for the other instance remains the old one 
    * `/publishCurrency/{curr}`: the second API will have the messaging feature, so the end result is that both instances are updated appropriately
+* [codebase](https://github.com/rishabh-handa/savedItems/tree/main/pubsub)
 
 #### Screenshots
-![](img/redis-pubsub.png)
+![redis-pubsub](img/redis-pubsub.png)
 
 
 ### Pros
