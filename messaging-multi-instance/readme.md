@@ -5,6 +5,18 @@
 subscribers on a channel. These messages are fire-and-forget, in that if a message is published and no subscribers exists, 
 the message evaporates and cannot be recovered.
 
+### POC
+* Created a singleton bean that stores some data in each instance
+* Created a scheduler that continually print the data from that singleton bean.
+* Created 2 API endpoints 
+   * `/addCurrency/{curr}`: first one only updates the current instance, without the messaging feature. So the end result will be that the value 
+     for 1 instance is updated, the value for the other instance remains the old one 
+   * `/publishCurrency/{curr}`: the second API will have the messaging feature, so the end result is that both instances are updated appropriately
+
+#### Screenshots
+![](img/redis-pubsub.png)
+
+
 ### Pros
 * Broadcasting feature. 
 * More than one channel can be subscribed to at a time.
