@@ -58,4 +58,5 @@ business ecosystem for greater agility and scalability.
 * Reliable - The message queue retains messages until the receiving application consumes them.
 
 ## Cons
+* Need to purchase this service.
 * Scope and limitations are listed here: https://help.sap.com/viewer/bf82e6b26456494cbdd197057c09979f/Cloud/en-US/ac83090b07684f8e908df40d024f8fe5.html
