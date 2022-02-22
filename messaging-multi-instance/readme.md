@@ -1,5 +1,7 @@
 # Multi-instance communication
 
+## Overview
+
 ## Option 1: Redis Pub/Sub
 * Redis can be used as a Publisher/Subscriber platform. In this pattern, publishers can issue messages to any number of 
 subscribers on a channel. These messages are fire-and-forget, in that if a message is published and no subscribers exists, 
@@ -45,6 +47,8 @@ business ecosystem for greater agility and scalability.
 * Each running instance will create a connection to a queue(subscriber/listener). 
 * A queue can subscribe to multiple topics.
 * Based on different Topics we can define different flows(for diff data).
+
+![event-mesh](img/pub-sub-q.PNG)
 
 ## Question
 * We need to create/delete a unique queue everytime we create/delete an instance of application.
