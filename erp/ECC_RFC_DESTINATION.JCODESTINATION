@@ -1,0 +1,10 @@
+jco.client.ashost=40.114.200.164
+jco.client.sysnr=00
+jco.client.client=800
+jco.client.lang=EN
+jco.client.trace=0
+jco.client.user=IDADMIN
+jco.client.passwd=ides123
+jco.destination.pool_capacity=5
+jco.destination.pool_check_connection=1
+Type=RFC 

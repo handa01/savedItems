@@ -1,0 +1,66 @@
+
+**** Error file opened at 20221011 010230 India Standard Time Rel 3.0.9 (2012-07-19) [721.44]
+Error:  >Tue Oct 11 01:02:30,979<    >RfcGetException rc (3) message: CPIC-CALL: CMRCV on convId: 34059410
+
+ERROR       connection to partner '40.114.200.164:3300' broken
+TIME        Tue Oct 11 01:02:30 2022
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      nixxi.cpp
+LINE        5087
+DETAIL      NiIRead: P=40.114.200.164:3300; L=192.168.1.6:54588
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     3
+
+<RfcGetException
+
+Error: [1] >Tue Oct 11 01:02:30,985<    RfcException: [IE8|ECCIDES]
+    message: CPIC-CALL: CMRCV on convId: 34059410
+
+ERROR       connection to partner '40.114.200.164:3300' broken
+TIME        Tue Oct 11 01:02:30 2022
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      nixxi.cpp
+LINE        5087
+DETAIL      NiIRead: P=40.114.200.164:3300; L=192.168.1.6:54588
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     3
+
+    Return code: RFC_SYS_EXCEPTION(3)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+Exception raised by IE8|ECCIDES
+
+
+**** Error file opened at 20221011 093851 India Standard Time Rel 3.0.9 (2012-07-19) [721.44]
+Error:  >Tue Oct 11 09:38:51,190<    
+>RfcIoException:
+    message: CPIC-CALL: CMRCV on convId: 64831514
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:3300' broken
+TIME        Tue Oct 11 12:08:50 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:50455
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     82679
+
+    Return code: RFCIO_ERROR_SYSERROR(5)<
+
+

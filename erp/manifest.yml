@@ -1,0 +1,8 @@
+---
+applications:
+- name: testconn
+  path: target/erp-0.0.1-SNAPSHOT.war
+  #path: C:\zMyprojects\spring-empty\target\spring-empty-1.0-SNAPSHOT.war
+#  type: java.tomcat
+  buildpacks:
+   - sap_java_buildpack
