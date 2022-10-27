@@ -1,0 +1,485 @@
+
+**** Log file opened at 20221014 111637 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [1]    >Fri Oct 14 11:16:37,663<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 29844136 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Fri Oct 14 13:46:37 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:56105
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     83682
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221014 112843 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [1]    >Fri Oct 14 11:28:43,271<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 30593784 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Fri Oct 14 13:58:43 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:56851
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     83699
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [1]    >Fri Oct 14 11:29:06,334<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 30617759 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Fri Oct 14 13:59:06 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:56849
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     83703
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221016 190034 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [1]    >Sun Oct 16 19:00:34,823<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 30036772 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Sun Oct 16 21:30:35 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:53019
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     84548
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221017 123834 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [1]    >Mon Oct 17 12:38:34,281<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 93992287 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Mon Oct 17 15:08:33 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:61288
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     84883
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [2]    >Mon Oct 17 12:40:15,979<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 94104318 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Mon Oct 17 15:10:15 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:61162
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     84890
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221017 130644 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error:     >Mon Oct 17 13:06:44,721<    >RfcGetException (rc=3) message: CPIC-CALL: CMRCV on convId: 94877172 with rc: 20
+
+ERROR       connection to partner '40.114.200.164:3300' broken
+TIME        Mon Oct 17 13:06:44 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5434
+DETAIL      NiIRead: P=40.114.200.164:3300; L=192.168.1.6:53287
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     3
+
+<RfcGetException
+
+
+Error: [2]    >Mon Oct 17 13:06:44,727<    RfcException raised by system [IE8|ECCIDES|00]:
+	message: CPIC-CALL: CMRCV on convId: 94877172 with rc: 20
+
+ERROR       connection to partner '40.114.200.164:3300' broken
+TIME        Mon Oct 17 13:06:44 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5434
+DETAIL      NiIRead: P=40.114.200.164:3300; L=192.168.1.6:53287
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     3
+
+	return code: RFC_SYS_EXCEPTION (3)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [5]    >Mon Oct 17 13:07:35,698<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 95798038 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Mon Oct 17 15:37:35 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:62116
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     84944
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 17 13:26:11,725<    >RfcGetException (rc=3) message: CPIC-CALL: CMRCV on convId: 94962319 with rc: 20
+
+ERROR       connection to partner '40.114.200.164:3300' broken
+TIME        Mon Oct 17 13:26:11 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5434
+DETAIL      NiIRead: P=40.114.200.164:3300; L=192.168.1.6:53293
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     3
+
+<RfcGetException
+
+
+Error: [4]    >Mon Oct 17 13:26:11,727<    RfcException raised by system [IE8|ECCIDES|00]:
+	message: CPIC-CALL: CMRCV on convId: 94962319 with rc: 20
+
+ERROR       connection to partner '40.114.200.164:3300' broken
+TIME        Mon Oct 17 13:26:11 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5434
+DETAIL      NiIRead: P=40.114.200.164:3300; L=192.168.1.6:53293
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     3
+
+	return code: RFC_SYS_EXCEPTION (3)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 17 13:27:34,850<    >RfcGetException (rc=3) message: CPIC-CALL: CMRCV on convId: 94879623 with rc: 20
+
+ERROR       connection to partner '40.114.200.164:3300' broken
+TIME        Mon Oct 17 13:27:34 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5434
+DETAIL      NiIRead: P=40.114.200.164:3300; L=192.168.1.6:53288
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     3
+
+<RfcGetException
+
+
+Error: [3]    >Mon Oct 17 13:27:34,851<    RfcException raised by system [IE8|ECCIDES|00]:
+	message: CPIC-CALL: CMRCV on convId: 94879623 with rc: 20
+
+ERROR       connection to partner '40.114.200.164:3300' broken
+TIME        Mon Oct 17 13:27:34 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5434
+DETAIL      NiIRead: P=40.114.200.164:3300; L=192.168.1.6:53288
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     3
+
+	return code: RFC_SYS_EXCEPTION (3)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221020 090449 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [2]    >Thu Oct 20 09:04:49,075<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 40245444 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Thu Oct 20 11:34:48 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:59826
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     86291
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221020 092147 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [2]    >Thu Oct 20 09:21:47,291<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 41285669 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Thu Oct 20 11:51:46 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:60065
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     86314
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221020 094330 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [1]    >Thu Oct 20 09:43:30,114<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 42619275 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Thu Oct 20 12:13:29 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:60600
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     86339
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [2]    >Thu Oct 20 09:43:52,929<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 42643316 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Thu Oct 20 12:13:52 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:60256
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     86344
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221020 120134 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [1]    >Thu Oct 20 12:01:34,374<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 51126631 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Thu Oct 20 14:31:33 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:63433
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     86440
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [1]    >Thu Oct 20 12:01:57,268<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 51150627 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Thu Oct 20 14:31:56 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:63432
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     86444
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221020 125022 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [1]    >Thu Oct 20 12:50:22,329<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 54129705 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Thu Oct 20 15:20:22 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:64181
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     86478
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [1]    >Thu Oct 20 12:51:19,216<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 54188617 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Thu Oct 20 15:21:18 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:64176
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     86482
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
