@@ -17,98 +17,106 @@ public class SAPECCContextImpl {
 
     public SAPECCContextImpl() throws JCoException {
         this.destination = JCoDestinationManager.getDestination(ECC_RFC_DESTINATION);
-        setRepositoryIfNull(true);
+        setRepositoryIfNull();
     }
 
     public SAPECCContextImpl(JCoDestination destination) throws JCoException {
         this.destination = destination;
-        setRepositoryIfNull(true);
+        setRepositoryIfNull();
     }
 
-    public JCoFunction getFunction(final String functionName) {
-        try {
-            setRepositoryIfNull(false);
-            return repository.getFunction(functionName);
-        } catch (final JCoException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
-
-    public void execute(final JCoFunction function) {
-        try {
+    public JCoFunction getFunction(final String functionName) throws JCoException {
+        if (repository == null) {
+            setRepositoryIfNull();
             if (repository == null) {
-                setRepositoryIfNull(true);
-                if (repository == null) {
-                    throw new RuntimeException("Failed to get the ECC Connection");
+                throw new RuntimeException("Failed to get the ECC Connection");
+            }
+        }
+        int retryCount = 0;
+        JCoException jCoException = null;
+        while (retryCount < NUMBER_OF_RETRY) {
+            try {
+                retryCount++;
+                return repository.getFunction(functionName);
+            } catch (final Exception e) {
+                try {
+                    if (e instanceof JCoException) {
+                        jCoException = (JCoException) e;
+                    }
+                    Thread.sleep(RETRY_WAITING_TIME);
+                    LOGGER.error("Retrying to get jcoFunction from repository: {} ", retryCount);
+                } catch (final InterruptedException e1) {
+                    Thread.currentThread().interrupt(); // restore interrupt
                 }
             }
-            final StopWatch sw = new StopWatch();
-            JCoFunction faultToleranceFunction = JCoUtils.faultTolerantWrapper(function);
-            faultToleranceFunction.execute(destination);
-            sw.stop();
-            if (LOGGER.isTraceEnabled())
-                LOGGER.trace("execution of {} took {}ms", function.getName(), sw.getTotalTimeMillis());
-        } catch (final JCoException e) {
+        }
 
-            throw new RuntimeException(e);
+        if (jCoException != null) {
+            throw jCoException;
+        } else {
+            throw new RuntimeException("Unable to get get jcoFunction from repository : " + retryCount);
         }
     }
 
-    private void setRepositoryIfNull(final boolean forceToGet) {
+    public void execute(final JCoFunction function) throws JCoException {
+        if (repository == null) {
+            setRepositoryIfNull();
+            if (repository == null) {
+                throw new RuntimeException("Failed to get the ECC Connection");
+            }
+        }
+
+        int retryCount = 0;
+        JCoException jCoException = null;
+        while (retryCount < NUMBER_OF_RETRY) {
+            try {
+                retryCount++;
+                function.execute(destination);
+                return;
+            } catch (final Exception e) {
+                try {
+                    if (e instanceof JCoException) {
+                        jCoException = (JCoException) e;
+                    }
+                    Thread.sleep(RETRY_WAITING_TIME);
+                    LOGGER.error("Retrying to execute jcoFunction : {} ", retryCount);
+                } catch (final InterruptedException e1) {
+                    Thread.currentThread().interrupt(); // restore interrupt
+                }
+            }
+        }
+
+        if (jCoException != null) {
+            throw jCoException;
+        } else {
+            throw new RuntimeException("Unable to execute the jcoFunction: " + function.getName());
+        }
+    }
+
+    private void setRepositoryIfNull() throws JCoException {
         if (repository != null) {
             return;
         }
 
-        if (forceToGet) {
-            setRepositoryWithMoreRetryTime();
-        } else {
-            setRepositoryWithSpecifiedRetry();
-        }
-
-        if (repository == null) {
-            throw new RuntimeException("Unable to get the repository from ERP due to communication error.");
-        }
-
-    }
-
-    private void setRepositoryWithMoreRetryTime() {
-        int retryCount = 0;
-        // Try for 30 second to get the repository
-        final StopWatch stopWatch = new StopWatch();
-        stopWatch.start();
-        // Try for 60 second/2 minute to get the repository
-        while (repository == null && stopWatch.getTotalTimeMillis() < (120000)) {
-            try {
-                retryCount++;
-                repository = destination.getRepository();
-            } catch (final Exception e) {
-                try {
-                    Thread.sleep(RETRY_WAITING_TIME);
-                } catch (final InterruptedException ie) {
-                    LOGGER.error("Failed to sleep : {} ", retryCount);
-                    Thread.currentThread().interrupt();
-                }
-                LOGGER.error("Retrying to get the repository from destination : {} ", retryCount);
-            }
-        }
-        if (repository == null) {
-            throw new RuntimeException(
-                    "Failed to get the repository after retrying for " + retryCount + " times.");
-        }
+        setRepositoryWithSpecifiedRetry();
     }
 
     /**
      * ${tags}
      */
-    private int setRepositoryWithSpecifiedRetry() {
+    private void setRepositoryWithSpecifiedRetry() throws JCoException {
         int retryCount = 0;
+        JCoException jCoException = null;
         while (repository == null && retryCount < NUMBER_OF_RETRY) {
             try {
                 retryCount++;
                 repository = destination.getRepository();
+                return;
             } catch (final Exception e) {
                 try {
+                    if (e instanceof JCoException) {
+                        jCoException = (JCoException) e;
+                    }
                     Thread.sleep(RETRY_WAITING_TIME);
                     LOGGER.error("Retrying to get the repository from destination : {} ", retryCount);
                 } catch (final InterruptedException e1) {
@@ -116,6 +124,11 @@ public class SAPECCContextImpl {
                 }
             }
         }
-        return retryCount;
+
+        if (jCoException != null) {
+            throw jCoException;
+        } else {
+            throw new RuntimeException("Unable to get the repository from destination : " + retryCount);
+        }
     }
 }

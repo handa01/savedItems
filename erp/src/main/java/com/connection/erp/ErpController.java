@@ -9,6 +9,8 @@ import org.springframework.http.MediaType;
 import org.springframework.util.SerializationUtils;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 import static com.connection.erp.SAPECCContextImpl.ECC_RFC_DESTINATION;
 
 @RestController
@@ -17,73 +19,16 @@ public class ErpController {
 
     ObjectMapper mapper = new ObjectMapper();
 
+    @GetMapping(value = "/getDestination", produces = MediaType.APPLICATION_JSON_VALUE)
+    public JsonNode getDestinationDetail() throws JCoException {
+        DestinationDetails details = new DestinationDetails();
+        JCoDestination destination = JCoDestinationManager.getDestination(ECC_RFC_DESTINATION);
+        details.setAsHost(destination.getApplicationServerHost());
+        details.setMsHost(destination.getMessageServerHost());
+        details.setClient(destination.getClient());
 
-//    public static JCoParameterList fetchERPResponse() {
-//        final RestTemplate restTemplate = new RestTemplate();
-//
-//        // CF
-//        final String fooResourceUrl = "https://testconn.cfapps.eu10.hana.ondemand.com/erp/BAPI_CUSTOMER_GETDETAIL2";
-//
-//        // Neo
-//        //String fooResourceUrl = "https://springrestexamplextvs7s4vl2.hana.ondemand.com/erp-0.0.1-SNAPSHOT/erp/BAPI_CUSTOMER_GETDETAIL2";
-//
-//        MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
-//        map.add("CUSTOMERNO", "0000001000");
-//
-//        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(fooResourceUrl).queryParams(map);
-//        String uriBuilder = builder.build().encode().toUriString();
-//
-//        final ResponseEntity<byte[]> response = restTemplate.getForEntity(uriBuilder, byte[].class);
-//
-//
-//        final JcoWrapper exportParam = (JcoWrapper) SerializationUtils.deserialize(response.getBody());
-//
-//        return null;
-//    }
-
-    // 0000001000
-//    @GetMapping("/erp/{bapiFunction}")
-//    byte[] erp(@PathVariable String bapiFunction, @RequestParam Map<String, String> reqParams) throws JCoException {
-//        MyECCContextImpl eccCtx = new MyECCContextImpl(destination);
-//        final JCoFunction jcoFunction = eccCtx.getFunction(bapiFunction);
-//        final JCoParameterList importParam = jcoFunction.getImportParameterList();
-//
-//        if (reqParams != null && reqParams.size() > 0) {
-//            for (String key : reqParams.keySet()) {
-//                importParam.setValue(key, reqParams.get(key));
-//            }
-//        }
-//
-//        final JCoParameterList exportParamBefore = jcoFunction.getExportParameterList();
-//        eccCtx.execute(jcoFunction);
-//
-//        final JCoParameterList exportParam = jcoFunction.getExportParameterList();
-//
-//        //JcoWrapper wrapper = new JcoWrapper(exportParam);
-//
-//        System.err.println("-----------------------------");
-//        System.err.println("export param successful: class = [" + exportParam.getClass() + "]"
-//                + exportParam);
-//
-//        String result = exportParam.getStructure("RETURN").getString("TYPE");
-//        //System.err.println("result=" + result);
-//        final JCoStructure customerAddress = exportParam.getStructure("CUSTOMERADDRESS");
-//        //System.err.println("customerAddress=" + customerAddress);
-//
-//        Class JMgrklass = exportParam.getClass();
-//        URL JMgrLocation = JMgrklass.getResource('/' + JMgrklass.getName().replace('.', '/') + ".class");
-//        System.err.println("JCoParameterList coming from");
-//        System.err.println(JMgrLocation);
-//
-//        byte[] exBytes = SerializationUtils.serialize(exportParam);
-//        System.err.println("Serialization successful");
-//
-////        JCoParameterList result2 = (JCoParameterList) SerializationUtils.deserialize(exBytes);
-////        String eResult2 = result2.getStructure("RETURN").getString("TYPE");
-////        final JCoStructure customerAddress2 = result2.getStructure("CUSTOMERADDRESS");
-//
-//        return exBytes;
-//    }
+        return mapper.convertValue(details, JsonNode.class);
+    }
 
     @GetMapping("/jcoFunction/{bapiFunction}")
     byte[] jcoFunction(@PathVariable String bapiFunction) throws JCoException {
@@ -92,24 +37,20 @@ public class ErpController {
         SAPECCContextImpl eccCtx = new SAPECCContextImpl();
         final JCoFunction jcoFunction = eccCtx.getFunction(bapiFunction);
 
-//        ClassLoader classLoader = jcoFunction.getClass().getClassLoader();
-//        CustomDeserialization.setCustomClassLoader(classLoader);
-//
-//        Class JMgrklass = jcoFunction.getClass();
-//        URL JMgrLocation = JMgrklass.getResource('/' + JMgrklass.getName().replace('.', '/') + ".class");
-//        System.err.println("JcoFunction is coming from");
-//        System.err.println(JMgrLocation);
-
-//        if(jcoFunction instanceof AbapFunction) {
-//            System.err.println("jcoFunction is Abapfunction");
-//        } else {
-//            System.err.println("jcoFunction is not Abapfunction");
-//        }
-
         byte[] exBytes = SerializationUtils.serialize(jcoFunction);
         System.err.println("getFunction: Serialization successful");
 
         return exBytes;
+    }
+
+    @GetMapping("/isValidJcoFunction/{bapiFunction}")
+    boolean isValidJcoFunction(@PathVariable String bapiFunction) throws JCoException {
+        System.err.println("Function name = " + bapiFunction);
+
+        SAPECCContextImpl eccCtx = new SAPECCContextImpl();
+        final JCoFunction jcoFunction = eccCtx.getFunction(bapiFunction);
+
+        return jcoFunction != null && jcoFunction.getName() != null && !jcoFunction.getName().equals("");
     }
 
     @PostMapping("/executeJcoFunction")
@@ -126,17 +67,17 @@ public class ErpController {
     }
 
     @PostMapping("/executeJcoFunctionWithTransaction")
-    byte[] executeJcoFunctionWithTransaction(@RequestBody byte[] bapiFunction) {
+    byte[] executeJcoFunctionWithTransaction(@RequestBody byte[] bapiFunction) throws JCoException {
         JCoFunction jcoFunction = (JCoFunction) new CustomDeserialization().deserialize(bapiFunction);
-        System.err.println("execute: Deserialization successful");
+        System.err.println("execute(Transaction): Deserialization successful: " + jcoFunction.getName());
         JCoDestination destination = null;
         try {
             destination = JCoDestinationManager.getDestination(ECC_RFC_DESTINATION);
-            SAPECCContextImpl eccCtx = new SAPECCContextImpl(destination);
-
 
             // begin transaction
             JCoContext.begin(destination);
+
+            SAPECCContextImpl eccCtx = new SAPECCContextImpl(destination);
             eccCtx.execute(jcoFunction);
 
             byte[] exBytes = SerializationUtils.serialize(jcoFunction);
@@ -144,57 +85,69 @@ public class ErpController {
             System.err.println("execute: Serialization successful");
 
             return exBytes;
-        } catch (JCoException ex) {
-            throw new RuntimeException(ex);
         } finally {
-            try {
-                if (destination != null) {
-                    JCoContext.end(destination);
-                }
-            } catch (JCoException e) {
-                LOGGER.error("Exception during context end", e);
+            if (destination != null) {
+                JCoContext.end(destination);
             }
         }
     }
 
-    @GetMapping(value = "/getDestination", produces = MediaType.APPLICATION_JSON_VALUE)
-    public JsonNode getDestinationDetail() throws JCoException {
-        DestinationDetails details = new DestinationDetails();
-        JCoDestination destination = JCoDestinationManager.getDestination(ECC_RFC_DESTINATION);
-        details.setAsHost(destination.getApplicationServerHost());
-        details.setMsHost(destination.getMessageServerHost());
-        details.setClient(destination.getClient());
 
-        return mapper.convertValue(details, JsonNode.class);
+    @PostMapping("/executeJcoFunctionWithTransactionAndCommit")
+    byte[] executeJcoFunctionWithTransactionAndCommit(@RequestBody byte[] bapiFunction) throws JCoException {
+        JCoFunction jcoFunction = (JCoFunction) new CustomDeserialization().deserialize(bapiFunction);
+        System.err.println("execute(TransactionAndCommit): Deserialization successful: " + jcoFunction.getName());
+        JCoDestination destination = null;
+        try {
+            ArrayList<JCoFunction> jCoFunctionList = new ArrayList<>();
+            destination = JCoDestinationManager.getDestination(ECC_RFC_DESTINATION);
+
+            // begin transaction
+            JCoContext.begin(destination);
+
+            SAPECCContextImpl eccCtx = new SAPECCContextImpl(destination);
+
+            JCoFunction commitFunction = eccCtx.getFunction("BAPI_TRANSACTION_COMMIT");
+
+            // Sales Order Create
+            eccCtx.execute(jcoFunction);
+
+            jCoFunctionList.add(jcoFunction);
+
+            // Find errors
+            JCoParameterList tables = jcoFunction.getTableParameterList();
+            boolean errorHappened = false;
+            final JCoTable result = tables.getTable("RETURN");
+            final int numRows = result.getNumRows();
+            for (int i = 0; i < numRows; i++) {
+                result.setRow(i);
+
+                final String msgType = result.getString("TYPE");
+                String message = result.getString("MESSAGE");
+                if ("E".equals(msgType) || "A".equals(msgType)) {
+                    System.err.println("Error message: " + message);
+                    errorHappened = true;
+                }
+            }
+
+            // execute the commit function if validation passes
+            if (!errorHappened) {
+                eccCtx.execute(commitFunction);
+                jCoFunctionList.add(commitFunction);
+            } else {
+                LOGGER.error("Error message found. Skipping commit");
+            }
+
+            byte[] exBytes = SerializationUtils.serialize(jCoFunctionList);
+
+            System.err.println("execute: Serialization successful");
+
+            return exBytes;
+        } finally {
+            // end context
+            if (destination != null) {
+                JCoContext.end(destination);
+            }
+        }
     }
-
-
-//    @GetMapping("/geterp")
-//    String erp() throws JCoException {
-//        fetchERPResponse();
-//        return "ok";
-//    }
-
-//    @GetMapping("/getJcoFunc")
-//    String jcoFuc() throws JCoException {
-//        final RestTemplate restTemplate = new RestTemplate();
-//
-//        // CF
-//        final String fooResourceUrl = "https://testconn.cfapps.eu10.hana.ondemand.com/jcoFunction/BAPI_CUSTOMER_GETDETAIL2";
-//
-//        // Neo
-//        //String fooResourceUrl = "https://springrestexamplextvs7s4vl2.hana.ondemand.com/erp-0.0.1-SNAPSHOT/erp/BAPI_CUSTOMER_GETDETAIL2";
-//
-//        MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
-////        map.add("CUSTOMERNO", "0000001000");
-//
-//        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(fooResourceUrl).queryParams(map);
-//        String uriBuilder = builder.build().encode().toUriString();
-//
-//        final ResponseEntity<byte[]> response = restTemplate.getForEntity(uriBuilder, byte[].class);
-//
-//
-//        final JCoFunction exportParam = (JCoFunction) SerializationUtils.deserialize(response.getBody());
-//        return "ok";
-//    }
 }

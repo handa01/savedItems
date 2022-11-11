@@ -483,3 +483,851 @@ COUNTER     86482
 	error group: 102
 	key: RFC_ERROR_COMMUNICATION
 
+
+**** Log file opened at 20221031 114019 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error:     >Mon Oct 31 11:40:19,448<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 11:40:19 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221031 114139 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error:     >Mon Oct 31 11:41:39,855<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 11:41:39 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 11:42:03,907<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 11:42:03 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     4
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 11:42:27,971<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 11:42:27 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     6
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 11:42:52,001<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 11:42:52 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     8
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 11:43:16,048<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 11:43:16 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     10
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 11:43:40,103<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 11:43:40 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     12
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221031 115452 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error:     >Mon Oct 31 11:54:52,472<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 11:54:52 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 11:58:31,734<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 11:58:31 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     4
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 11:58:55,809<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 11:58:55 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     6
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221031 131646 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error:     >Mon Oct 31 13:16:46,746<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 13:16:46 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 13:17:10,803<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 13:17:10 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     4
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 13:17:34,863<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 13:17:34 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     6
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 14:14:39,252<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 14:14:39 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 14:15:03,321<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 14:15:03 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     4
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 14:15:27,392<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 14:15:27 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     6
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 14:16:20,692<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 14:16:20 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 14:16:44,743<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 14:16:44 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     4
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 14:17:08,798<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 14:17:08 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     6
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 14:18:22,807<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 14:18:22 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 14:18:46,850<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 14:18:46 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     4
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error:     >Mon Oct 31 14:19:10,892<    RfcException raised by system [<unknown>]:
+	message: Connect to SAP gateway failed
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION ASHOST=40.114.200.165 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '40.114.200.165:3300' not reached
+TIME        Mon Oct 31 14:19:10 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 40.114.200.165:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     6
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221101 103842 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [1]    >Tue Nov 01 10:38:42,671<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 82794969 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Tue Nov 01 13:08:42 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:54517
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     89805
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221103 105009 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [2]    >Thu Nov 03 10:50:09,008<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 56617865 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Thu Nov 03 13:20:08 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:56191
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     91629
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [2]    >Thu Nov 03 10:50:58,930<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 56669733 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Thu Nov 03 13:20:58 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:56101
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     91633
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [2]    >Thu Nov 03 10:51:48,736<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 56726600 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Thu Nov 03 13:21:47 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:55926
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     91638
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221106 195019 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [1]    >Sun Nov 06 19:50:19,000<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 47835627 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Sun Nov 06 22:20:18 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:54767
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     93256
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [2]    >Sun Nov 06 19:51:00,761<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 47878406 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Sun Nov 06 22:21:00 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:54754
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     93260
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221106 201535 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [1]    >Sun Nov 06 20:15:35,671<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 49390281 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Sun Nov 06 22:45:35 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:55187
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     93271
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [1]    >Sun Nov 06 20:15:58,473<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 49414104 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Sun Nov 06 22:45:58 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:55181
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     93275
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [1]    >Sun Nov 06 20:52:44,954<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 51697555 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Sun Nov 06 23:22:44 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:56121
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     93308
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [2]    >Sun Nov 06 20:55:23,543<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 51868057 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Sun Nov 06 23:25:23 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:56112
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     93312
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221106 223537 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [1]    >Sun Nov 06 22:35:37,954<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 58061544 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Mon Nov 07 01:05:37 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:58690
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     93403
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [1]    >Sun Nov 06 22:36:00,962<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 58085395 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Mon Nov 07 01:06:00 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:58672
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     93410
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+
+**** Log file opened at 20221107 140758 India Standard Time Rel. 3.1.6 (2022-05-18) [753.1018]
+Error: [2]    >Mon Nov 07 14:07:58,440<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 13418532 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Mon Nov 07 16:37:57 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:64026
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     94056
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
+Error: [1]    >Mon Nov 07 14:08:21,297<    RfcException raised by system [<noSID>|40.114.200.164|00]:
+	message: Establishing connection to communication partner failed at CPIC-CALL: CMRCV on convId: 13442466 with rc: 20
+	connection parameters: TYPE=A DESTINATION=ECC_RFC_DESTINATION CLIENT=800 USER=IDADMIN PASSWD=<secret> LANG=EN ASHOST=40.114.200.164 SYSNR=00 PCS=1
+
+LOCATION    SAP-Gateway on host ECCIDES / sapgw00
+ERROR       connection to partner '40.114.200.164:sapgw00' broken
+TIME        Mon Nov 07 16:38:20 2022
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        5430
+DETAIL      NiIRead: P=40.114.200.164:3300; L=10.0.0.4:63899
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     94060
+
+	return code: RFC_FAILURE (1)
+	error group: 102
+	key: RFC_ERROR_COMMUNICATION
+
