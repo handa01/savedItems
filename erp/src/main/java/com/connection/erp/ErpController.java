@@ -30,9 +30,9 @@ public class ErpController {
         return mapper.convertValue(details, JsonNode.class);
     }
 
-    @GetMapping("/jcoFunction/{bapiFunction}")
-    byte[] jcoFunction(@PathVariable String bapiFunction) throws JCoException {
-        System.err.println("Function name = " + bapiFunction);
+    @PostMapping("/getJcoFunction")
+    byte[] jcoFunction(@RequestBody String bapiFunction) throws JCoException {
+        System.err.println("getJcoFunction: Function name = " + bapiFunction);
 
         SAPECCContextImpl eccCtx = new SAPECCContextImpl();
         final JCoFunction jcoFunction = eccCtx.getFunction(bapiFunction);
@@ -43,9 +43,9 @@ public class ErpController {
         return exBytes;
     }
 
-    @GetMapping("/isValidJcoFunction/{bapiFunction}")
-    boolean isValidJcoFunction(@PathVariable String bapiFunction) throws JCoException {
-        System.err.println("Function name = " + bapiFunction);
+    @PostMapping("/isValidJcoFunction")
+    boolean isValidJcoFunction(@RequestBody String bapiFunction) throws JCoException {
+        System.err.println("isValidJcoFunction: Function name = " + bapiFunction);
 
         SAPECCContextImpl eccCtx = new SAPECCContextImpl();
         final JCoFunction jcoFunction = eccCtx.getFunction(bapiFunction);
